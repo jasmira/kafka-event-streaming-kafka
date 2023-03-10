@@ -1,0 +1,16 @@
+[
+  {
+    "namespace": "org.data.event.streaming.utility.entity",
+    "type": "record",
+    "name": "Transaction",
+    "fields": [
+      {"name": "transactionID", "type": "long"},
+      {"name": "accountNumber",  "type": "string"},
+      {"name": "creationTime",  "type": "string"},
+      {"name": "processingTime", "type": ["string", "null"]},
+      {"name": "persistenceTime", "type": ["string", "null"]},
+      {"name": "amount", "type": "long"},
+      {"name": "operationType","type": {"type": "enum","name": "OperationType","symbols": ["CREDIT","DEBIT"]}}
+    ]
+  }
+]
